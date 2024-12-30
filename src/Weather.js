@@ -1,4 +1,5 @@
 import React from "react";
+import Weatherimg from './images/weatherBg.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind, faWater } from "@fortawesome/free-solid-svg-icons";
 
@@ -7,11 +8,11 @@ function Weather(props) {
     <div>
       
       <div className="w-full h-screen relative">
-        <div  className="h-full w-full bg-[rgb(44,11,14)]"> </div>
+        <img src={Weatherimg} className="h-full w-full object-cover" alt="Weather Background" />
         <div className="w-full h-screen bg-black bg-opacity-30 absolute top-0"></div>
 
    
-        <div className="w-[90%] md:w-[60%] lg:w-[50%] bg-black shadow-2xl bg-opacity-70 rounded-xl absolute top-20 left-1/2 transform -translate-x-1/2 p-6">
+        <div className="w-[90%] md:w-[60%] lg:w-[50%] bg-black bg-opacity-70 rounded-xl absolute top-20 left-1/2 transform -translate-x-1/2 p-6">
          
           <div className="flex justify-center mb-6">
             <input
@@ -40,7 +41,7 @@ function Weather(props) {
             <>
              
               <div className="flex flex-col items-center ">
-               <img src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} className="animate-pulse" alt="weatherimg"></img>
+               <img src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`} className="animate-pulse" alt="weatherImag"></img>
                <p className="text-lg md:text-xl text-yellow-300 font-bold">{props.data.weather[0].description}</p>
                 <p className="text-6xl md:text-7xl text-white font-bold">
                   {Math.floor(props.data.main.temp)}°C
