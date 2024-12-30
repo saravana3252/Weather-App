@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Weather from './Weather';
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 function App() {
 
@@ -28,8 +29,45 @@ useEffect(()=>{
 
   return (
     <div>
+      
     {weatherData ? (
-        <Weather data={weatherData} inpValue={inpValue}/>
+      <>
+      <Parallax className="relative z-10 h-[1100px] lg:h-[1000px]" pages={2} style={{ top: "0", left: "0" }}>
+      {/* Background Layers */}
+      <ParallaxLayer offset={0} speed={0.25}>
+          <div className="absolute h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/background.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.3}>
+          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/jungle1.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.3}>
+          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/jungle2.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.35}>
+          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/jungle3.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.5}>
+          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/jungle4.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.4}>
+          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/jungle5.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={0.45}>
+          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/man_on_mountain.png')]"></div>
+      </ParallaxLayer>
+      <ParallaxLayer offset={0} speed={-0.1}>
+          <div className="absolute  h-full w-full flex justify-center items-center text-yellow-700 text-5xl font-bold">
+              <p className="pb-28">WEATHER APP</p>
+          </div>
+      </ParallaxLayer>
+
+
+      <ParallaxLayer offset={1} speed={0.25}>
+      <Weather data={weatherData} inpValue={inpValue}/>
+      </ParallaxLayer>
+  </Parallax>
+        
+        </>
     ) : (
        
 <div role="status" className='flex justify-center items-center h-screen overflow-hidden bg-gray-500 '>

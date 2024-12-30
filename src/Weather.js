@@ -1,5 +1,4 @@
 import React from "react";
-import Weatherimg from './images/weatherBg.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind, faWater } from "@fortawesome/free-solid-svg-icons";
 
@@ -8,7 +7,7 @@ function Weather(props) {
     <div>
       
       <div className="w-full h-screen relative">
-        <img src={Weatherimg} className="h-full w-full object-cover" alt="Weather Background" />
+        <div className="h-full w-full bg-[rgb(44,11,14)]"></div>
         <div className="w-full h-screen bg-black bg-opacity-30 absolute top-0"></div>
 
    
