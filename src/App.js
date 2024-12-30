@@ -55,7 +55,7 @@ useEffect(()=>{
                 <ParallaxLayer offset={0} speed={0.45}>
                     <div className="absolute  h-[900px] w-full bg-cover bg-center bg-[url('/src/images/man_on_mountain.png')]"></div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={0} speed={0.2}>
+                <ParallaxLayer offset={0} speed={-0.1}>
                     <div className="absolute  h-full w-full flex justify-center items-center text-yellow-700 text-5xl font-bold">
                         <p className="pb-24">WEATHER APP</p>
                     </div>
