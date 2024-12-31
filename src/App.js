@@ -34,7 +34,7 @@ useEffect(()=>{
       <>
       <Parallax className="relative z-10 h-[1100px] lg:h-[1000px]" pages={2} style={{ top: "0", left: "0" }}>
       {/* Background Layers */}
-      <ParallaxLayer offset={0} speed={0.25}>
+      <ParallaxLayer offset={0} speed={0.25} >
           <div className="absolute h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/background.png')]"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0.3}>
@@ -52,11 +52,11 @@ useEffect(()=>{
       <ParallaxLayer offset={0} speed={0.4}>
           <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/jungle5.png')]"></div>
       </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.45}>
+      <ParallaxLayer offset={0} speed={0.45} className='hidden lg:block'>
           <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/man_on_mountain.png')]"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={-0.1}>
-          <div className="absolute  h-full w-full flex justify-center items-center text-yellow-700 text-5xl font-bold">
+          <div className="absolute lg:h-full  h-[700px] w-full flex justify-center items-center text-yellow-700 text-5xl font-bold">
               <p className="pb-28">WEATHER APP</p>
           </div>
       </ParallaxLayer>
