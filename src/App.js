@@ -9,6 +9,7 @@ let [weatherData,setWeatherData]=useState(null)
 let [city,setCity]=useState("chennai")
 
 
+
 function inpValue(value){
   setCity(value || "chennai")
 }
@@ -32,7 +33,7 @@ useEffect(()=>{
       
     {weatherData ? (
       <>
-      <Parallax className="relative z-10 h-[1100px] lg:h-[1000px]" pages={2} style={{ top: "0", left: "0" }}>
+<Parallax className="relative z-10 h-[1100px] lg:h-[1000px]" pages={2} style={{ top: "0", left: "0" }}>
       {/* Background Layers */}
       <ParallaxLayer offset={0} speed={0.25} className='hidden lg:block' >
           <div className="absolute h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/background.png')]"></div>
@@ -56,7 +57,7 @@ useEffect(()=>{
           <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/man_on_mountain.png')]"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0.45} className='block lg:hidden'>
-          <div className="absolute  h-[1000px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/mobile-bg.jpg')]"></div>
+          <div className="absolute  h-[1050px] lg:h-[900px] w-full bg-cover bg-center bg-[url('/src/images/mobile-bg.jpg')]"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={0} speed={-0.1}>
           <div className="absolute lg:h-full  h-[550px] w-full flex justify-center items-center text-yellow-700 text-5xl font-bold">
