@@ -8,7 +8,7 @@ function App() {
 let [weatherData,setWeatherData]=useState(null)
 let [city,setCity]=useState("chennai")
 
-const isMobile=window.screen.width >= 500;
+const isMobile=window.screen.width >= 1250;
 
 function inpValue(value){
   setCity(value || "chennai")

@@ -1,14 +1,19 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind, faWater } from "@fortawesome/free-solid-svg-icons";
+import bgImg from "./images/weatherBg.jpg"
 
 function Weather(props) {
-  return (
-    <div className="w-full h-screen relative bg-[rgb(44,11,14)]">
- 
-      <div className="w-full h-full bg-black bg-opacity-40 absolute top-0"></div>
 
-   
+  const isMobile=window.screen.width >= 1250;
+
+  return (
+    <div
+    className={`w-full h-screen relative ${
+      isMobile ?  "bg-[rgb(44,11,14)]":"bg-cover bg-center"
+    }`}
+    style={isMobile ? {} : { backgroundImage: `url(${bgImg})` }}
+  >
       <div className="w-[90%] md:w-[70%] lg:w-[50%] bg-black bg-opacity-80 rounded-xl absolute top-20 left-1/2 transform -translate-x-1/2 p-6">
     
         <div className="flex items-center justify-center mb-6 space-x-4">
