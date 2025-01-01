@@ -41,7 +41,7 @@ function Weather(props) {
           </div>
         ) : (
           <>
-            {/* Main Weather Display */}
+           
             <div className="flex flex-col items-center text-center">
               <img
                 src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
@@ -60,12 +60,12 @@ function Weather(props) {
             </div>
 
        
-            <div className="flex flex-col md:flex-row justify-around mt-8 text-white space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row justify-around mt-8  text-white space-y-4 md:space-y-0">
          
-              <div className="flex justify-between w-full md:w-[70%] mx-auto space-x-4">
+              <div className="flex justify-between w-full md:w-[70%] lg:w-[95%]  mx-auto space-x-4">
          
                 <div className="flex items-center space-x-2 lg:space-x-4">
-                  <FontAwesomeIcon icon={faWater} className="fa-2x lg:fa-3x text-blue-400" />
+                  <FontAwesomeIcon icon={faWater} className="fa-2x  text-blue-400" />
                   <div>
                     <p className="text-md font-bold md:text-2xl">
                       {props.data.main.humidity}%
@@ -76,7 +76,7 @@ function Weather(props) {
 
              
                 <div className="flex items-center space-x-2 lg:space-x-4">
-                  <FontAwesomeIcon icon={faWind} className="fa-2x lg:fa-3x text-green-400" />
+                  <FontAwesomeIcon icon={faWind} className="fa-2x text-green-400" />
                   <div>
                     <p className="text-md font-bold md:text-2xl">
                       {props.data.wind.speed} km/hr
