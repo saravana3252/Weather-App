@@ -10,7 +10,7 @@ function Weather(props) {
   return (
     <div
     className={`w-full h-screen relative ${
-      isMobile ?  "bg-[rgb(44,11,14)]":"bg-cover bg-center"
+      isMobile ?  "bg-[rgb(27,7,9)]":"bg-cover bg-center"
     }`}
     style={isMobile ? {} : { backgroundImage: `url(${bgImg})` }}
   >
