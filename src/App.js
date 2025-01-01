@@ -8,7 +8,7 @@ function App() {
 let [weatherData,setWeatherData]=useState(null)
 let [city,setCity]=useState("chennai")
 
-
+const isMobile=window.screen.width >= 500;
 
 function inpValue(value){
   setCity(value || "chennai")
@@ -32,6 +32,7 @@ useEffect(()=>{
     <div>
       
     {weatherData ? (
+        isMobile ?(
       <>
 <Parallax className="relative z-10 h-[1100px] lg:h-[1000px]" pages={2} style={{ top: "0", left: "0" }}>
       {/* Background Layers */}
@@ -72,6 +73,9 @@ useEffect(()=>{
   </Parallax>
         
         </>
+        ):(
+            <Weather data={weatherData} inpValue={inpValue}/>  
+        )
     ) : (
        
 <div role="status" className='flex justify-center items-center h-screen overflow-hidden bg-gray-500 '>
